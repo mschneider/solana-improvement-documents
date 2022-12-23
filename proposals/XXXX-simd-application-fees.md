@@ -55,8 +55,8 @@ It requires :
 
 
 ## POC
-A draft proof of concept has been implemented.
+A draft proof of concept has been implemented. \
 
-Repo : git@github.com:blockworks-foundation/solana.git
-Branch : application-fees
-Pull Request : https://github.com/blockworks-foundation/solana/pull/18
+Repo : `https://github.com/blockworks-foundation/solana.git` \
+Branch : `application-fees` \
+Pull Request : `https://github.com/blockworks-foundation/solana/pull/18` 
