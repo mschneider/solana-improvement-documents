@@ -26,7 +26,7 @@ As an owner of a writable account that is used a lot in the network, a program c
 
 These application fees will be tracked by the bank as it is running transaction batches and eventually when the bank is frozen it will dispatch all the application fees that were collected to the respective writable accounts. Then the owners of the writable accounts can collect these fees directly from the writable accounts.
 
-Programs/Owners can also invoke or cpi instructions like Rebate or RebateAll to effectively cancel this application fee for good actors. So in the end application fee won't be charged to these actors. 
+Programs/Owners can also invoke or cpi instructions like Rebate or RebateAll to effectively cancel this application fee for good actors. So in the end application fee won't be charged to these actors. The rebate will be effective only if the transaction is executed and it wont be effective if the transaction fails.
 
 ### Application fee program
 
@@ -60,3 +60,17 @@ A draft proof of concept has been implemented. \
 [Repo](https://github.com/blockworks-foundation/solana.git) \
 Branch : `application-fees` \
 [Pull Request](https://github.com/blockworks-foundation/solana/pull/18)
+
+## Mango V4 Usecase
+With this feature implemented Mango-V4 will be able to charge users who spam risk-free aribitrage or spam liquidations by increasing application fees on perp-markets, token banks and mango-user accounts.
+#### Perp markets
+Application fees on perp liquidations, perp place order, perp cancel, perp consume, perp settle fees.
+Rebates on : successful liquidations, consume events, HFT marketmaking refresh (cancel all, N* place POST, no IOC).
+
+#### Token vaults
+Application fees on openorderbook liquidations, deposit, withdrawals.
+Rebate on successful liquidations, place IOC & fill in isolation, HFT marketmaking refresh (cancel all, N* place POST, no IOC).
+
+#### Mango accounts 
+Application fees on all liquidity transactions, consume events, settle pnl, all user signed transactions.
+Rebate on transaction signed by owner or delegate, successful liquidations, settlements, consume events.
