@@ -1,5 +1,5 @@
 ---
-simd: 'XXXX'
+simd: '0016'
 title: Application Fees (Write-lock fees)
 authors:
   - Godmode Galactus (Mango Markets)
