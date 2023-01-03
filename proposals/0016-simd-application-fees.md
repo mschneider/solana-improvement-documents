@@ -61,6 +61,11 @@ A draft proof of concept has been implemented. \
 Branch : `application-fees` \
 [Pull Request](https://github.com/blockworks-foundation/solana/pull/18)
 
+## Example contract
+
+Here is an working example to test application fees with a smart contract (work in progress).
+[Example](git@github.com:godmodegalactus/paper-clip-maximizer.git)
+
 ## Mango V4 Usecase
 With this feature implemented Mango-V4 will be able to charge users who spam risk-free aribitrage or spam liquidations by increasing application fees on perp-markets, token banks and mango-user accounts.
 #### Perp markets
